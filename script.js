@@ -18,9 +18,21 @@ function Submit() {
     Http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var result = JSON.parse(Http.responseText);
-            document.getElementById('predicted-gender').innerHTML = result.gender;
-            document.getElementById('predicted-probability').innerHTML = result.probability;
-            console.log(result);
+            if (result.gender) {
+                document.getElementById('predicted-gender').style.color = 'black'
+                document.getElementById('predicted-gender').innerHTML = result.gender;
+                document.getElementById('predicted-probability').innerHTML = result.probability;
+                console.log(result);
+            } else {
+                document.getElementById('predicted-gender').innerHTML = "Not found";
+                document.getElementById('predicted-gender').style.color = 'red'
+                document.getElementById('predicted-probability').innerHTML = "";
+            }
+
+        } else {
+            document.getElementById('predicted-gender').innerHTML = "Not found";
+            document.getElementById('predicted-gender').style.color = 'red'
+            document.getElementById('predicted-probability').innerHTML = "";
         }
     }
     loadSavedGender()
@@ -53,13 +65,14 @@ function loadSavedGender() {
 
     if (name in savedNames) {
         var savedGender = savedNames[name]
-        x.style.display = "block";
+        document.getElementById('saved-gender').innerHTML = savedGender;
+        x.style.display = "flex";
     } else {
         x.style.display = "none";
     }
 }
 
-function clearSavedGender(){
+function clearSavedGender() {
     var name = document.getElementById('name-input').value
 
     if (name in savedNames) {

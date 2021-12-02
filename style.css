@@ -109,7 +109,8 @@ body {
     height: 100px;
     display: flex;
     flex-direction: column;
-    /* display: none; */
+    justify-content: flex-start;
+    display: none;
 }
 
 #saved-answer{
