@@ -14,8 +14,10 @@
     <div>
         <div id="content">
             <div class="row">
+
+
                 <div class="column">
-                    <h2>
+                    <h2 class="column-header">
                         Mr. or Ms.?
                     </h2>
                     <form name="myForm" id="myForm" onsubmit="event.preventDefault(); Submit()">
@@ -35,16 +37,30 @@
                         </div>
                         <div id="buttons">
                             <input type="submit" value="Submit" class="form-button">
-                            <button class="form-button">
+                            <button class="form-button" onclick="event.preventDefault(); Save()">
                                 Save
                             </button>
                         </div>
                     </form>
                 </div>
+
+
                 <div class="column">
-                    <h2>
+                    <h2 class="column-header">
                         Prediction
                     </h2>
+                    <div id="predicted-result">
+                        <p id='predicted-gender' class="predicted-item">Unknown</p>
+                        <p id="predicted-probability" class="predicted-item">1</p>
+                    </div>
+                    <div id="saved-answers-box">
+                        <div id="saved-answer">
+                            <h2 id='saved-gender'>male</h2>
+                        </div>
+                        <button id="clear-button" onclick="clearSavedGender()">
+                            Clear
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
