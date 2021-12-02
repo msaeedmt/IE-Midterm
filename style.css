@@ -1,0 +1,86 @@
+body {
+    background-image: url('assets/puddle_water_drops_183933_1680x1050.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    opacity: 0.85;
+}
+
+#content {
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+/* .column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    border-radius: 20px;
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+.column{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* flex-grow: 1; */
+    padding-left: 35px;
+    padding-top: 10px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+#radio-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.radio-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+
+#input-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+
+#name-input{
+    width: 60%;
+    margin-left:10px;
+}
+
+.form-button{
+    margin: 10px 0px;
+    width: 100px;
+}
+
