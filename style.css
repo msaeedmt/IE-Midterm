@@ -1,3 +1,5 @@
+/* setting the background image in cover mood and centerized position with a flex display and 
+centerazid content and setting its opacity */
 body {
     background-image: url('assets/puddle_water_drops_183933_1680x1050.jpg');
     background-size: cover;
@@ -12,88 +14,100 @@ body {
     opacity: 0.85;
 }
 
+/* changing the background color and setting custom height and width for the main container 
+with radiused solid black border */
 #content {
     background-color: white;
-    height: 320px;
+    height: 310px;
     width: 500px;
     border: solid 1px black;
     border-radius: 20px;
 }
 
-/* .column {
-    float: left;
-    width: 50%;
-}
-
-.row:after {
-    border-radius: 20px;
-    content: "";
-    display: table;
-    clear: both;
-} */
-
-.column{
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    /* flex-grow: 1; */
-    padding-left: 35px;
-    padding-top: 10px;
-}
-
-.column-header{
-    margin: 20px 0px 5px 0px;
-}
-
+/* make flex display for two main columns of the container */
 .row{
     display: flex;
     flex-direction: row;
     align-items: stretch;
 }
 
+/* setting flex display for main columns with vertical flex-direction begining from top to bottom with 
+customized paddings */
+.column{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+
+/* make custom margin for column headers*/
+.column-header{
+    margin: 20px 0px 5px 0px;
+}
+
+
+/* make flex display with vertical arrangment for buttons box*/
 #buttons{
     display: flex;
     flex-direction: column;
 }
 
+/* setting flex display for radio items with vertical alignment starting from the begining of the container */
 #radio-box{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+/* setting flex display with horizontal alignment starting from the begining of the 
+container with customized padding  */
 .radio-item{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 10px 0px;
+    padding: 10px 0px 0px 0px;
 }
 
+/* setting flex display with horizontal alignment starting from the begining of the 
+container with customized padding  */
 #input-field{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 25px 0px;
+    padding: 25px 0px 15px 0px;
 }
 
+/* changing the input width and set cutome margin */
 #name-input{
     width: 60%;
     margin-left:10px;
 }
 
+/* setting custome margin */
 .form-button{
-    margin: 10px 0px;
+    margin: 15px 0px 0px 0px;
     width: 100px;
 }
 
+/* settin flex display with starting from left to right and custome color and none display */
+#save-message{
+    display: flex;
+    justify-content: flex-start;
+    color: green;
+    display: none;
+}
+
+/* setting flex display with vertical alignment starting from top to bottom */
 #predicted-result{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+/* setting flex display starting from left to right with custom height and margin for the container */
 .predicted-item{
     height: 10px;
     margin: 10px 0px;
@@ -102,6 +116,8 @@ body {
     float: left;
 }
 
+/* setting flex display with vertical alignment starting from top to bottom with dashed margin 
+and default dispaly of none */
 #saved-answers-box{
     margin: 30px 0px;
     border: dashed 1px black;
@@ -113,6 +129,7 @@ body {
     display: none;
 }
 
+/* setting flex dispaly with vertical alignment starting from top to bottom with customized height */
 #saved-answer{
     height: 80px;
     display: flex;
@@ -120,6 +137,7 @@ body {
     justify-content: flex-start;
 }
 
+/* setting flex display starting from right to left with custome padding and margin */
 #saved-gender{
     display: flex;
     justify-content: flex-start;
@@ -127,15 +145,13 @@ body {
     margin: 0px;
 }
 
+/* set custome margin */
 .saved-gender-item{
     margin: 4px 0px;
 }
 
+/* set custome width */
 #clear-button{
     width: 70px;
-    /*bottom: 5px;
-    left: 5px;
-    position: relative; */
-    align-self: flex-start;
 }
 
